@@ -28,24 +28,19 @@ public class TextMouseListener extends JFrame {
 		c.add(m_la);	//초기 라벨 위치 지정
 		
 		c.addMouseListener(new MouseAdapter() {	//익명 클래스로 이벤트 생성 후 컨텐트팬에 연결
-
 			@Override
 			public void mousePressed(MouseEvent e) {
 				// TODO Auto-generated method stub
 				super.mousePressed(e);
 				m_la.setLocation(e.getX(),e.getY());	//컨텐트 내부 클릭하면 m_la 라벨 위치 이동
 			}
-			
 		});
-		
 		
 		m_tf.setSize(100,20);
 		m_tf.setLocation(120,20);
 		c.add(m_tf);
-		
-		
-		m_tf.addActionListener(new ActionListener() {	//익명클래스로 이벤트 생성 후 텍스트필드에 연결
 
+		m_tf.addActionListener(new ActionListener() {	//익명클래스로 이벤트 생성 후 텍스트필드에 연결
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
@@ -53,10 +48,7 @@ public class TextMouseListener extends JFrame {
 				m_la.setText(t.getText());	//m_la를 바꿀 텍스트로 변경
 				t.setText("");	//텍스트필드를 빈칸으로 초기화
 			}
-			
 		});
-		
-		
 		setVisible(true);
 		setSize(300,300);
 	}
@@ -65,5 +57,4 @@ public class TextMouseListener extends JFrame {
 		// TODO Auto-generated method stub
 		new TextMouseListener();
 	}
-
 }
